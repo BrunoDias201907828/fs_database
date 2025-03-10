@@ -41,7 +41,6 @@ def load_sensor_data(run_id, topic, msg, timestamp):
 
     metric_name = TOPIC_METRIC_MAPPING[topic]
 
-    # Insert into the database
     conn = get_db_connection()
     cur = conn.cursor()
 

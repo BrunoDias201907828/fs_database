@@ -8,7 +8,6 @@ TOPIC_METRIC_MAPPING = {
     "/perception/cones": "num_cones",
 }
 
-
 def load_perception_data(run_id, topic, msg, timestamp):
     """
     Processes a perception topics and inserts data into the perception table.

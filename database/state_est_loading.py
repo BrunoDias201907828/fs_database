@@ -3,7 +3,6 @@ from datetime import datetime, timezone
 from custom_interfaces.msg import VehicleState
 
 
-# Topic to Metric Name Mapping
 TOPIC_METRIC_MAPPING = {
     "/state_estimation/execution_time/correction_step": "correction_step",
     "/state_estimation/execution_time/prediction_step": "prediction_step",
@@ -85,7 +84,6 @@ def load_state_estimation_state_data(run_id, topic, msg, timestamp):
         print(f"Error: Could not extract data from message on {topic}: {e}")
         return
 
-    # Insert data into the database
     conn = get_db_connection()
     cur = conn.cursor()
 

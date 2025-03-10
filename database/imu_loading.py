@@ -90,7 +90,6 @@ def load_imu_data(run_id, topic, msg, timestamp):
         print(f"Error: Could not extract data from message on {topic}: {e}")
         return
 
-    # Insert into the database
     conn = get_db_connection()
     cur = conn.cursor()
 
